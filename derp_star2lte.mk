@@ -28,11 +28,15 @@ $(call inherit-product, device/samsung/star2lte/device.mk)
 TARGET_SCREEN_HEIGHT := 2960
 TARGET_SCREEN_WIDTH := 1440
 
-## Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+## Inherit some common AOSP stuff
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+DERP_RELEASE := true
+TARGET_BOOT_ANIMATION_RES := 1080
+USE_LEGACY_BOOTANIMATION := true
+DERP_BUILDTYPE := Official
 
 ## Device identifier, this must come after all inclusions
-PRODUCT_NAME := lineage_star2lte
+PRODUCT_NAME := derp_star2lte
 PRODUCT_DEVICE := star2lte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-G965F
